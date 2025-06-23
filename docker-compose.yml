@@ -1,0 +1,19 @@
+services:
+  streamlitwithproxy:
+    image: streamlit_with_proxy
+    ports:
+      - 8501:8501
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+
+  web:
+    image: nginx
+    volumes:
+      - ./templates/nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+     - "8080:80"
+    environment:
+     - NGINX_HOST=foobar.com
+     - NGINX_PORT=80
+

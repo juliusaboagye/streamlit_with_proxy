@@ -1,0 +1,20 @@
+# Streamlit configuration
+[theme]
+base="light"
+primaryColor="#007F00"  # bp green
+backgroundColor="#FFFFFF"  # white
+secondaryBackgroundColor="#F7F7F7"  # bp pale grey 1
+
+[browser]
+gatherUsageStats = false
+
+[logger]
+level = "info"
+messageFormat = "%(asctime)s - %(levelname)-5s - [%(filename)s:%(lineno)d] - %(funcName)s - %(message)s"
+
+[runner]
+fastReruns = true
+
+[server]
+runOnSave = true
+baseUrlPath = "locat"

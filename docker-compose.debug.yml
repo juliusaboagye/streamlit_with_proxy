@@ -1,0 +1,6 @@
+services:
+  streamlitwithproxy:
+    image: streamlitwithproxy
+    build:
+      context: .
+      dockerfile: ./Dockerfile
